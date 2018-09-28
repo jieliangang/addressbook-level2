@@ -6,7 +6,7 @@ import seedu.addressbook.data.exception.IllegalValueException;
 /**
  * Represents a contact information.
  */
-public class Contact {
+public abstract class Contact {
 
     public String value;
     protected boolean isPrivate;
@@ -20,6 +20,9 @@ public class Contact {
         return value;
     }
 
+    public abstract boolean equals(Object other);
+
+    public abstract boolean isValidValue(String test);
 
     @Override
     public int hashCode() {
